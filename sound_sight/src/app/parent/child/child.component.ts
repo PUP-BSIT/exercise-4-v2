@@ -7,5 +7,5 @@ import { Profile } from '../../../model/user_music_profile';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
-  @Input() Profile: Profile;
+  @Input() profile: Profile;
 }

@@ -7,5 +7,5 @@ import { Profile } from '../../model/user_music_profile';
   styleUrl: './parent.component.css'
 })
 export class ParentComponent {
-  music: Profile[] = [];
+  profiles: Profile[] = [];
 }
