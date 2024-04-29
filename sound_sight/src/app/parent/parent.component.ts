@@ -7,4 +7,50 @@ import { Profile } from '../../model/user_music_profile';
 })
 export class ParentComponent {
   profiles: Profile[] = []
+
+    //For Adding Purposes
+    newProfile: Profile = {
+      id : null,
+      username: '',
+      birthday: null,
+      age: null,
+      location: '',
+      music_taste: '',
+      mood: '',
+      favorite_song: ''
+  }
+
+  isProfileValid(profile: Profile){
+    return (
+      profile.username &&
+      profile.birthday &&
+      profile.age &&
+      profile.location &&
+      profile.music_taste &&
+      profile.mood &&
+      profile.favorite_song
+    );
+  }
+
+  resetNewProfile(){
+    this.newProfile = {
+      id : null,
+      username: '',
+      birthday: null,
+      age: null,
+      location: '',
+      music_taste: '',
+      mood: '',
+      favorite_song: ''
+    };
+  }
+
+  //Adding Functionality/ Method
+  addProfile(){
+    if (this.isProfileValid(this.newProfile)){  
+      this.newProfile.id = this.profiles.length + 1;
+      this.profiles.push(this.newProfile);
+      this.resetNewProfile();
+    }
+  }
 }
