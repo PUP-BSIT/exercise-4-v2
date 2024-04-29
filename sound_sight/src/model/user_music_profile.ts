@@ -6,5 +6,5 @@ export type Profile = {
     location: string, 
     music_taste: string,
     mood: string,
-    favorite_sing: string
+    favorite_song: string
 }
