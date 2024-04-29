@@ -53,4 +53,13 @@ export class ParentComponent {
       this.resetNewProfile();
     }
   }
+
+  //Delete Functionality/ Method
+  deleteProfile(profile: Profile){
+    const confirmDelete = confirm(
+      "Are you sure you want to delete this Profile");
+    if (confirmDelete){
+      this.profiles = this.profiles.filter(s => s !== profile);
+    }
+  }
 }
