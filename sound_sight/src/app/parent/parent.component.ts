@@ -8,7 +8,6 @@ import { Profile } from '../../model/user_music_profile';
 export class ParentComponent {
   profiles: Profile[] = []
 
-    //For Adding Purposes
     newProfile: Profile = {
       id : null,
       username: '',
@@ -45,7 +44,6 @@ export class ParentComponent {
     };
   }
 
-  //Adding Functionality/ Method
   addProfile(){
     if (this.isProfileValid(this.newProfile)){  
       this.newProfile.id = this.profiles.length + 1;
@@ -54,12 +52,18 @@ export class ParentComponent {
     }
   }
 
-  //Delete Functionality/ Method
   deleteProfile(profile: Profile){
     const confirmDelete = confirm(
       "Are you sure you want to delete this Profile");
     if (confirmDelete){
       this.profiles = this.profiles.filter(s => s !== profile);
+    }
+  }
+
+  updateProfile(updatedProfile : Profile) {
+    const index = this.profiles.findIndex(s => s.id === updatedProfile.id);
+    if (index !== -1){
+      this.profiles[index] = { ...updatedProfile };
     }
   }
 }
