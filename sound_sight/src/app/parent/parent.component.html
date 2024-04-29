@@ -1,3 +1,65 @@
+<h2>Add New Profile</h2>
+<form (ngSubmit)="addProfile()">
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" 
+            name="username" 
+            id="username" 
+            [(ngModel)]="newProfile.username" required>
+    </div>
+
+    <div>
+        <label for="birthday">Birthday: </label>
+        <input type="text" 
+            name="birthday" 
+            id="birthday" 
+            [(ngModel)]="newProfile.birthday" required>
+    </div>
+
+    <div>
+        <label for="age">Age: </label>
+        <input type="number" 
+            name="age" 
+            id="age" 
+            [(ngModel)]="newProfile.age" required>
+    </div>
+
+    <div>
+        <label for="location">Location: </label>
+        <input type="text" 
+            name="location" 
+            id="location" 
+            [(ngModel)]="newProfile.location" required>
+    </div>
+
+    <div>
+        <label for="music_taste">Music Taste/ Genre: </label>
+        <input type="text" 
+            name="music_taste" 
+            id="music_taste" 
+            [(ngModel)]="newProfile.music_taste" required>
+    </div>
+
+    <div>
+        <label for="mood">Mood: </label>
+        <input type="text" 
+            name="mood" 
+            id="mood" 
+            [(ngModel)]="newProfile.mood" required>
+    </div>
+
+    <div>
+        <label for="favorite_song">Favorite Song:</label>
+        <input type="text" 
+            name="favorite_song" 
+            id="favorite_song" 
+            [(ngModel)]="newProfile.favorite_song" required>
+    </div>
+
+    <button type="submit">Add Profile</button>
+</form>
+
 <div *ngFor="let profile of profiles">
-    <appchild [profile]="profile"></appchild>
+    <app-child [profile]="profile"></app-child>
+    <button (click)="deleteProfile(profile)">Delete Profile</button>
 </div>
