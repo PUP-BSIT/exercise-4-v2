@@ -1,79 +1,75 @@
-<div class="edit-container" ngIf="isEditing">
+<div class="edit-container" *ngIf="isEditing">
   <div>
-    <label for="username">Username</label>
-    <input
-      type="text"
-      name="username"
-      id="username"
-      [(ngModel)]="editedProfile.username"
-    />
+      <label for="username">Username</label>
+      <input type="text" 
+          name="username" 
+          id="username" 
+          [(ngModel)]="editedProfile.username">
   </div>
 
   <div>
-    <label for="birthday">Birthday</label>
-    <input
-      type="text"
-      name="birthday"
-      id="birthday"
-      [(ngModel)]="editedProfile.birthday"
-    />
+      <label for="birthday">Birthday</label>
+      <input type="text" 
+          name="birthday" 
+          id="birthday" 
+          [(ngModel)]="editedProfile.birthday">
   </div>
 
   <div>
-    <label for="age">Age</label>
-    <input type="number" name="age" id="age" [(ngModel)]="editedProfile.age" />
+      <label for="age">Age</label>
+      <input type="number" 
+          name="age" 
+          id="age" 
+          [(ngModel)]="editedProfile.age">
   </div>
 
   <div>
-    <label for="location">location</label>
-    <input
-      type="text"
-      name="Location"
-      id="Location"
-      [(ngModel)]="editedProfile.location"
-    />
+      <label for="location">location</label>
+      <input type="text" 
+          name="Location" 
+          id="Location" 
+          [(ngModel)]="editedProfile.location">
   </div>
 
   <div>
-    <label for="music_taste">Music Taste</label>
-    <input
-      type="text"
-      name="music_taste"
-      id="music_taste"
-      [(ngModel)]="editedProfile.music_taste"
-    />
+      <label for="music_taste">Music Taste</label>
+      <input type="text" 
+          name="music_taste" 
+          id="music_taste" 
+          [(ngModel)]="editedProfile.music_taste">
   </div>
 
   <div>
-    <label for="mood">Mood</label>
-    <input type="text" name="mood" id="mood" [(ngModel)]="editedProfile.mood" />
+      <label for="mood">Mood</label>
+      <input type="text" 
+          name="mood" 
+          id="mood" 
+          [(ngModel)]="editedProfile.mood">
   </div>
 
   <div>
-    <label for="favorite_song">Favorite Song</label>
-    <input
-      type="text"
-      name="favorite_song"
-      id="favorite_song"
-      [(ngModel)]="editedProfile.favorite_song"
-    />
+      <label for="favorite_song">Favorite Song</label>
+      <input type="text" 
+          name="favorite_song" 
+          id="favorite_song" 
+          [(ngModel)]="editedProfile.favorite_song">
   </div>
 
   <button (click)="saveChanges()">Save</button>
   <button (click)="cancelEdit()">Cancel</button>
 </div>
 
-<div class="profile-container" ngIf="!isEditing">
+<div class="profile-container" *ngIf="!isEditing">
   <div class="profile-info">
-    <p>Username: {{ profile.username }}</p>
-    <p>Birthday: {{ profile.birthday }}</p>
-    <p>Age: {{ profile.age }}</p>
+    <p>Username : {{ profile.username}}</p>
+    <p>User's Birthday : {{ profile.birthday }}</p>
+    <p>Age : {{ profile.age }}</p>
     <button (click)="editProfile()">Edit</button>
   </div>
-  <div class="profile-info">
-    <p>Location: {{ profile.location }}</p>
-    <p>Music Taste: {{ profile.music_taste }}</p>
-    <p>Mood: {{ profile.mood }}</p>
-    <p>Favorite Song: {{ profile.favorite_song }}</p>
-  </div>
+ <div class="profile-info">
+  <p>Location : {{ profile.location }}</p>
+  <p>User's Music taste: {{ profile.music_taste }}</p>
+  <p>Mood: {{ profile.mood }}</p>
+  <p>Current Favorite Track: {{ profile.favorite_song }}</p>
+ </div>
 </div>

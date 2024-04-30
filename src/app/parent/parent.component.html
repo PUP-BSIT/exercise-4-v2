@@ -1,88 +1,68 @@
 <h1>SoundSight</h1>
 <h2>Add New Profile</h2>
 <div class="flex-container">
-    <form (ngSubmit)="addProfile()">
-        <div>
-          <label for="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            [(ngModel)]="newProfile.username"
-            required
-          />
-        </div>
-      
-        <div>
-          <label for="birthday">Birthday</label>
-          <input
-            type="text"
-            name="birthday"
-            id="birthday"
-            [(ngModel)]="newProfile.birthday"
-            required
-          />
-        </div>
-      
-        <div>
-          <label for="age">Age</label>
-          <input
-            type="number"
-            name="age"
-            id="age"
-            [(ngModel)]="newProfile.age"
-            required
-          />
-        </div>
-      
-        <div>
-          <label for="location">location</label>
-          <input
-            type="text"
-            name="Location"
-            id="Location"
-            [(ngModel)]="newProfile.location"
-            required
-          />
-        </div>
-      
-        <div>
-          <label for="music_taste">Music Taste</label>
-          <input
-            type="text"
-            name="music_taste"
-            id="music_taste"
-            [(ngModel)]="newProfile.music_taste"
-            required
-          />
-        </div>
-      
-        <div>
-          <label for="mood">Mood</label>
-          <input
-            type="text"
-            name="mood"
-            id="mood"
-            [(ngModel)]="newProfile.mood"
-            required
-          />
-        </div>
-      
-        <div>
-          <label for="favorite_song">Favorite Song</label>
-          <input
-            type="text"
-            name="favorite_song"
-            id="favorite_song"
-            [(ngModel)]="newProfile.favorite_song"
-            required
-          />
-        </div>
-        <button type="submit">Add Profile</button>
-      </form>
+  <form (ngSubmit)="addProfile()">
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" 
+            name="username" 
+            id="username" 
+            [(ngModel)]="newProfile.username" required>
+    </div>
+
+    <div>
+        <label for="birthday">Birthday: </label>
+        <input type="text" 
+            name="birthday" 
+            id="birthday" 
+            [(ngModel)]="newProfile.birthday" required>
+    </div>
+
+    <div>
+        <label for="age">Age: </label>
+        <input type="number" 
+            name="age" 
+            id="age" 
+            [(ngModel)]="newProfile.age" required>
+    </div>
+
+    <div>
+        <label for="location">Location: </label>
+        <input type="text" 
+            name="location" 
+            id="location" 
+            [(ngModel)]="newProfile.location" required>
+    </div>
+
+    <div>
+        <label for="music_taste">Music Taste/ Genre: </label>
+        <input type="text" 
+            name="music_taste" 
+            id="music_taste" 
+            [(ngModel)]="newProfile.music_taste" required>
+    </div>
+
+    <div>
+        <label for="mood">Mood: </label>
+        <input type="text" 
+            name="mood" 
+            id="mood" 
+            [(ngModel)]="newProfile.mood" required>
+    </div>
+
+    <div>
+        <label for="favorite_song">Favorite Song:</label>
+        <input type="text" 
+            name="favorite_song" 
+            id="favorite_song" 
+            [(ngModel)]="newProfile.favorite_song" required>
+    </div>
+
+    <button type="submit">Add Profile</button>
+</form>
 </div>
 
 <div class="profile-container" *ngFor="let profile of profiles">
-    <button class="delete-button" (click)="deleteProfile(profile)">Delete</button>
-  <app-child [profile]="profile"></app-child>
+  <button class="delete-button" (click)="deleteProfile(profile)">Delete</button>
+    <app-child [profile]="profile"></app-child>
 </div>
