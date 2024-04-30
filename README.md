@@ -1,1 +1,11 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/kVz3ab7T)
+# SoundSight Website :musical_note:
+
+Welcome to SoundSight, your ultimate destination for creating personalized music profiles and discovering new favorite songs! This repository contains the source code for our innovative platform designed to enhance your music exploration experience.
+
+## Features :headphones:
+
+- **Personalized Profiles:** SoundSight allows you to create personalized profiles where you can showcase your favorite songs, username, location, mood, genre preferences, and more.
+- **Effortless Navigation:** Enjoy an intuitive and visually appealing interface for seamless navigation throughout the platform.
+
+
+Explore [SoundSight](https://soundsightv2.netlify.app/) now and start creating your music profile today!
