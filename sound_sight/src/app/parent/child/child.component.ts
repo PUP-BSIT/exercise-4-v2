@@ -21,4 +21,10 @@ export class ChildComponent {
     this.profile = { ...this.editedProfile };
     this.isEditing = false;
   }
+
+  cancelEdit() {
+    this.isEditing = false;
+  }
 }
+
+
